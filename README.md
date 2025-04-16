@@ -25,13 +25,18 @@ A sleek, modern web application that extracts and downloads transcripts from You
    ```bash
    npm install
    ```
+3. Build the project
+  ```bash
+  npm run build
+  ```
 
-3. Start the server
+
+4. Start the server
    ```bash
    npm start
    ```
 
-4. Open your browser and go to http://localhost:3000
+5. Open your browser and go to http://localhost:3000
 
 ## Usage
 
