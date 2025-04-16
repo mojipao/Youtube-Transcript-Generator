@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+
+# dotenv environment variables
+.env
+
+# TypeScript output
+/dist
+/build
+/src/public/*.js
+/src/public/*.js.map
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# misc
+.DS_Store

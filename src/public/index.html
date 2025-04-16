@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Transcript Maker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="description" content="Extract transcripts from YouTube videos easily">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>YouTube Transcript Maker</h1>
+      <p class="subtitle">Easily extract and download transcripts from any YouTube video</p>
+    </header>
+
+    <div class="input-section">
+      <div class="input-container">
+        <label for="youtube-url">Enter YouTube Video URL:</label>
+        <input type="text" id="youtube-url" placeholder="https://www.youtube.com/watch?v=..." autocomplete="off">
+      </div>
+      <div class="button-container">
+        <button id="fetch-button" class="btn primary">Get Transcript</button>
+        <button id="reset-button" class="btn secondary">Reset</button>
+      </div>
+    </div>
+
+    <div id="loading-spinner" class="hidden">
+      <div class="spinner"></div>
+      <p>Fetching transcript...</p>
+    </div>
+
+    <div id="error-message" class="hidden"></div>
+
+    <div id="output-section" class="hidden">
+      <div class="output-header">
+        <div id="video-info"></div>
+        <div class="action-buttons">
+          <button id="copy-button" class="btn action">Copy Text</button>
+          <button id="download-button" class="btn action">Download</button>
+        </div>
+      </div>
+      
+      <div id="transcript-container">
+        <h3>Transcript</h3>
+        <div id="transcript-content"></div>
+      </div>
+      
+      <div id="tts-section" class="hidden">
+        <h3>Text-to-Speech</h3>
+        <div class="tts-controls">
+          <div class="input-row">
+            <label for="tts-provider">TTS Provider:</label>
+            <select id="tts-provider" class="tts-select"></select>
+          </div>
+          
+          <div class="input-row api-key-input">
+            <label for="tts-api-key">API Key:</label>
+            <input type="password" id="tts-api-key" placeholder="Enter your API key" autocomplete="off">
+          </div>
+          
+          <div class="button-row">
+            <button id="tts-button" class="btn primary">Generate Speech</button>
+          </div>
+          
+          <div id="tts-loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Generating audio...</p>
+          </div>
+          
+          <audio id="tts-audio-player" controls class="hidden"></audio>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Created by Mohriz Murad</p>
+      <p class="disclaimer">This tool is not affiliated with YouTube or Google</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html> 
