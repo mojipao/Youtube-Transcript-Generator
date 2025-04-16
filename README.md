@@ -26,9 +26,9 @@ A sleek, modern web application that extracts and downloads transcripts from You
    npm install
    ```
 3. Build the project
-  ```bash
-  npm run build
-  ```
+   ```bash
+   npm run build
+   ```
 
 
 4. Start the server
